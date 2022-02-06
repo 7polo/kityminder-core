@@ -1,5 +1,5 @@
 {
-  "name": "kityminder-core",
+  "name": "@7polo/kityminder-core",
   "title": "Kity Minder Core",
   "description": "KityMinder Core Implement",
   "version": "1.4.50",
@@ -37,7 +37,7 @@
   ],
   "dependencies": {
     "json-diff": "^0.5.2",
-    "kity": "^2.0.4",
+    "@7polo/kity": "^2.0.7",
     "seajs": "^2.3.0"
   },
   "devDependencies": {

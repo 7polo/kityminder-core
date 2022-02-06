@@ -130,7 +130,7 @@ define(function(require, exports, module) {
             base: kity.Group,
 
             constructor: function(node) {
-                this.callBase();
+                this.callBase2(kity.Group, 'constructor', []);
                 this.radius = 6;
                 this.outline = new kity.Circle(this.radius).stroke('gray').fill('white');
                 this.sign = new kity.Path().stroke('gray');

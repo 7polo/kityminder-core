@@ -1,9 +1,9 @@
 /*!
  * ====================================================
- * Kity Minder Core - v1.4.50 - 2018-09-17
+ * Kity Minder Core - v1.4.50 - 2022-02-06
  * https://github.com/fex-team/kityminder-core
  * GitHub: https://github.com/fex-team/kityminder-core.git 
- * Copyright (c) 2018 Baidu FEX; Licensed BSD-3-Clause
+ * Copyright (c) 2022 Baidu FEX; Licensed BSD-3-Clause
  * ====================================================
  */
 
@@ -4730,7 +4730,7 @@ _p[45] = {
         var DropHinter = kity.createClass("DropHinter", {
             base: kity.Group,
             constructor: function() {
-                this.callBase();
+                this.callBase2(kity.Group, "constructor", []);
                 this.rect = new kity.Rect();
                 this.addShape(this.rect);
             },
@@ -4745,7 +4745,7 @@ _p[45] = {
         var OrderHinter = kity.createClass("OrderHinter", {
             base: kity.Group,
             constructor: function() {
-                this.callBase();
+                this.callBase2(kity.Group, "constructor", []);
                 this.area = new kity.Rect();
                 this.path = new kity.Path();
                 this.addShapes([ this.area, this.path ]);
@@ -5159,7 +5159,7 @@ _p[46] = {
             var Expander = kity.createClass("Expander", {
                 base: kity.Group,
                 constructor: function(node) {
-                    this.callBase();
+                    this.callBase2(kity.Group, "constructor", []);
                     this.radius = 6;
                     this.outline = new kity.Circle(this.radius).stroke("gray").fill("white");
                     this.sign = new kity.Path().stroke("gray");
@@ -6214,7 +6214,7 @@ _p[54] = {
             var NoteIcon = kity.createClass("NoteIcon", {
                 base: kity.Group,
                 constructor: function() {
-                    this.callBase();
+                    this.callBase2(kity.Group, "constructor", []);
                     this.width = 16;
                     this.height = 17;
                     this.rect = new kity.Rect(16, 17, .5, -8.5, 2).fill("transparent");
@@ -6420,7 +6420,7 @@ _p[56] = {
             var PriorityIcon = kity.createClass("PriorityIcon", {
                 base: kity.Group,
                 constructor: function() {
-                    this.callBase();
+                    this.callBase2(kity.Group, "constructor", []);
                     this.setSize(20);
                     this.create();
                     this.setId(utils.uuid("node_priority"));
@@ -6549,7 +6549,7 @@ _p[57] = {
             var ProgressIcon = kity.createClass("ProgressIcon", {
                 base: kity.Group,
                 constructor: function(value) {
-                    this.callBase();
+                    this.callBase2(kity.Group, "constructor", []);
                     this.setSize(20);
                     this.create();
                     this.setValue(value);
@@ -6881,7 +6881,7 @@ _p[58] = {
             var ResourceOverlay = kity.createClass("ResourceOverlay", {
                 base: kity.Group,
                 constructor: function() {
-                    this.callBase();
+                    this.callBase2(kity.Group, "constructor", []);
                     var text, rect;
                     rect = this.rect = new kity.Rect().setRadius(4);
                     text = this.text = new kity.Text().setFontSize(12).setVerticalAlign("middle");

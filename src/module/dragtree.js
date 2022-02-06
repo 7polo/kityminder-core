@@ -27,7 +27,7 @@ define(function(require, exports, module) {
         base: kity.Group,
 
         constructor: function() {
-            this.callBase();
+            this.callBase2(kity.Group, 'constructor', []);
             this.rect = new kity.Rect();
             this.addShape(this.rect);
         },
@@ -51,7 +51,7 @@ define(function(require, exports, module) {
         base: kity.Group,
 
         constructor: function() {
-            this.callBase();
+            this.callBase2(kity.Group, 'constructor', []);
             this.area = new kity.Rect();
             this.path = new kity.Path();
             this.addShapes([this.area, this.path]);
