@@ -1,6 +1,6 @@
 /*!
  * ====================================================
- * Kity Minder Core - v1.4.51 - 2022-04-10
+ * Kity Minder Core - v1.4.52 - 2022-04-11
  * https://github.com/fex-team/kityminder-core
  * GitHub: https://github.com/fex-team/kityminder-core.git 
  * Copyright (c) 2022 Baidu FEX; Licensed BSD-3-Clause
@@ -5169,7 +5169,8 @@ _p[46] = {
                     this.setStyle("cursor", "pointer");
                 },
                 initEvent: function(node) {
-                    this.on("mousedown", function(e) {
+                    var target = this.node;
+                    target.addEventListener("mousedown", function(e) {
                         minder.select([ node ], true);
                         if (node.isExpanded()) {
                             node.collapse();
@@ -5181,7 +5182,7 @@ _p[46] = {
                         e.stopPropagation();
                         e.preventDefault();
                     });
-                    this.on("dblclick click mouseup", function(e) {
+                    target.addEventListener("dblclick click mouseup", function(e) {
                         e.stopPropagation();
                         e.preventDefault();
                     });
