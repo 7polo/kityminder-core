@@ -1,9 +1,9 @@
 /*!
  * ====================================================
- * Kity Minder Core - v1.4.52 - 2022-04-11
+ * Kity Minder Core - v1.4.53 - 2023-06-04
  * https://github.com/fex-team/kityminder-core
  * GitHub: https://github.com/fex-team/kityminder-core.git 
- * Copyright (c) 2022 Baidu FEX; Licensed BSD-3-Clause
+ * Copyright (c) 2023 Baidu FEX; Licensed BSD-3-Clause
  * ====================================================
  */
 
@@ -4771,6 +4771,9 @@ _p[45] = {
                 minder.getRenderContainer().addShapes([ this._dropHinter, this._orderHinter ]);
             },
             dragStart: function(position) {
+                if (this._minder._defaultOptions.readOnly) {
+                    return;
+                }
                 // 只记录开始位置，不马上开启拖放模式
                 // 这个位置同时是拖放范围收缩时的焦点位置（中心）
                 this._startPosition = position;
@@ -4840,6 +4843,9 @@ _p[45] = {
             //    1. 计算拖放源和允许的拖放目标
             //    2. 标记已启动
             _enterDragMode: function() {
+                if (this._minder._defaultOptions.readOnly) {
+                    return false;
+                }
                 this._calcDragSources();
                 if (!this._dragSources.length) {
                     this._startPosition = null;
